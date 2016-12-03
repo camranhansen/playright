@@ -1,9 +1,12 @@
 var act = 0; //init act number
 var scene = 0; //init scene number
 var line = 0; //init line number
-function scroll() {
+function update() {
 	var objDiv = document.getElementById("script");
 	objDiv.scrollTop = objDiv.scrollHeight;
+}
+function scrollTo(element) {
+	$("#script").scrollTop($("#script").scrollTop() + $("#"+element).position().top);
 }
 function submit() {
 	$('#enterLine').submit(function(event) {
@@ -37,28 +40,33 @@ function submit() {
 			}
 			$("#"+id).append('<div class="text">'+text+'</div>');
 		}
-		scroll();
+		update();
 		return false;
 	});
 	$('#addAct').submit(function(event) {
 		act += 1;
 		scene = 0;
 		line = 0;
-		$("#script").append("<h1>Act "+act.toString()+"</h1>");
+		var act_content = "Act "+act.toString();
+		var act_id = "act"+act.toString();
+		$("#script").append("<h1 id=\""+act_id+"\">"+act_content+"</h1>");
+		$("#toc").append('<button class="heading" onclick="scrollTo(\''+act_id+'\')">'+act_content+'</button>');
+		update();
 		return false;
-		scroll();
 	});
 	$('#addScene').submit(function(event) {
 		scene += 1;
 		line = 0;
-		$("#script").append("<h2>Scene "+scene.toString()+"</h2>");
+		var scene_content = "Scene "+scene.toString();
+		var scene_id = "scene"+act.toString()+"-"+scene.toString();
+		$("#script").append("<h2 id=\""+scene_id+"\">"+scene_content+"</h2>");
+		$("#toc").append('<button class="subheading" onclick="scrollTo(\''+scene_id+'\')">'+scene_content+'</button>');
+		update();
 		return false;
-		scroll();
 	});
 }
 function main() {
     submit();
+    update();
 }
 $(document).ready(main);
-
-

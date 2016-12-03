@@ -1,16 +1,15 @@
 body, html {
-  height: 100%;
-	margin: 0 50px;
+  height: 100vh;
+	margin: 0 25px;
 }
 textarea {
   vertical-align: top
-}
-.main_div{
 }
 #script {
 	height: 68vh;
 	background-color: green;
   overflow: scroll;
+  padding: 20px;
 }
 #enterLine {
   height: 27vh;
@@ -51,28 +50,22 @@ textarea {
   margin-bottom: 0.5vh;
   width: 20vw;
 }
-.maintextbox{
-	padding-left: 4%;
+#toc {
+  padding-top: 40px;
 }
-
-nav[data-toggle='toc'] {
-  margin-top: 30px;
+.heading {
+  width: 100%;
+  background-color: #FFF;
+  border: none;
+  text-align: left;
 }
-
-/* small screens */
-@media (max-width: 768px) {
-  /* override the Affix plugin so that the navigation isn't sticky */
-  nav.affix[data-toggle='toc'] {
-    position: static;
-  }
-
-  /* PICK ONE */
-  /* don't expand nested items, which pushes down the rest of the page when navigating */
-  nav[data-toggle='toc'] .nav .active .nav {
-    display: none;
-  }
-  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
-  nav[data-toggle='toc'] .nav .nav {
-    display: block;
-  }
+.subheading {
+  width: 80%;
+  margin-left: 20%;
+  background-color: #FFF;
+  border: none;
+  text-align: left; 
+}
+.heading:hover, .subheading:hover {
+  text-decoration: underline;
 }
