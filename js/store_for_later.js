@@ -1,22 +1,23 @@
-var myJsonString;
+var jsoncookie;
+var play = {"a":"a"};
 function alertCookie() {
-  x = getCookie("thewholeplay");
-  y = JSON.parse(x);
-  console.log(y.name);
-
+    x = getCookie("thewholeplay");
+    y = JSON.parse(x);
+    console.log(y.name);
+    getCookie("thewholeplay")
 }
 
-function dothings(){
-	var play = {"name":"bob"};
-	var myJsonString = JSON.stringify(play);
-	alert(myJsonString);
+function dothings() {
+    play["1"].
+    var jsoncookie = JSON.stringify(play);
+    alert(jsoncookie);
 
-	document.cookie = "thewholeplay="+myJsonString;
-	alert(play.name);
-	// document.cookie = "favorite_food=tripe";
+    document.cookie = "thewholeplay=" + jsoncookie;
+    alert(play.name);
 }
+
 function getCookie(name) {
-  var value = "; " + document.cookie;
-  var parts = value.split("; " + name + "=");
-  if (parts.length == 2) return parts.pop().split(";").shift();
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
 }
