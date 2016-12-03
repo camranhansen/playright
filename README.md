@@ -3,4 +3,4 @@ An application to aid play writers with formatting scripts (the right way). Buil
 Created during Cipher's Local Hack Day hackathon in December 2016.
 Contributors: Camran Hansen, Amanda Plotnik, Casey Koh, and Alan Ma.
 
-cATS
+cATSs
