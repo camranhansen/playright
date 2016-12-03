@@ -1,0 +1,14 @@
+.namediv {
+	font-family: courier, monospace;
+	font-weight: bold;
+	font-size: 12px;
+	position: relative;
+	padding: 50px;
+}
+
+.linediv {
+	font-family: courier, monospace;
+	font-size: 12px;
+	position: relative;
+	padding: 50px;
+}
