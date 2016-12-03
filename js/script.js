@@ -49,7 +49,7 @@ function submit() {
 		line = 0;
 		var act_content = "Act "+act.toString();
 		var act_id = "act"+act.toString();
-		$("#script").append("<h1 id=\""+act_id+"\">"+act_content+"</h1>");
+		$("#script").append("<h1 class='act' id=\""+act_id+"\">"+act_content+"</h1>");
 		$("#toc").append('<button class="heading" onclick="scrollTo(\''+act_id+'\')">'+act_content+'</button>');
 		update();
 		return false;
@@ -59,7 +59,7 @@ function submit() {
 		line = 0;
 		var scene_content = "Scene "+scene.toString();
 		var scene_id = "scene"+act.toString()+"-"+scene.toString();
-		$("#script").append("<h2 id=\""+scene_id+"\">"+scene_content+"</h2>");
+		$("#script").append("<h2 class='scene' id=\""+scene_id+"\">"+scene_content+"</h2>");
 		$("#toc").append('<button class="subheading" onclick="scrollTo(\''+scene_id+'\')">'+scene_content+'</button>');
 		update();
 		return false;

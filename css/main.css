@@ -7,13 +7,11 @@ textarea {
 }
 #script {
   height: 68vh;
-  background-color: green;
   overflow: scroll;
   padding: 20px;
 }
 #enterLine {
   height: 27vh;
-  background-color: red;
 }
 #inputName {
   height: 7vh;
@@ -58,14 +56,35 @@ textarea {
   background-color: #FFF;
   border: none;
   text-align: left;
+  font-family: courier, monospace;
+  font-family: 1.5rem;
 }
 .subheading {
   width: 80%;
   margin-left: 20%;
   background-color: #FFF;
   border: none;
-  text-align: left; 
+  text-align: left;
+  font-family: courier, monospace;
+  font-family: 1.2rem;
 }
 .heading:hover, .subheading:hover {
   text-decoration: underline;
+}
+.nameHolder {
+  font-family: courier, monospace;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.text {
+  font-family: courier, monospace;
+  font-size: 1.6rem;
+}
+.act {
+  font-family: courier, monospace;
+  font-size: 2.5rem;
+}
+.scene {
+  font-family: courier, monospace;
+  font-size: 2.2rem;
 }
