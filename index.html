@@ -11,30 +11,29 @@
 		<div class="main_div">
 			
 		</div>
-		<div id="script">
-			test
-		</div>
-		<form id="enterLine" class="col-md-12">
-			<div class="row">
+		<div class="container">
+			<div id="script"></div>
+			<div id="addSection" class="col-md-12">
+				<form id="addAct" class="col-md-6">
+					<input id="actbtn" type="submit" value="Add Act">
+				</form>
+				<form id="addScene" class="col-md-6">
+					<input id="scenebtn" type="submit" value="Add Scene">
+				</form>
+			</div>
+			<form id="enterLine" class="col-md-12">
 				<div class="col-md-3">
-					<div class="row">
-						<input id="inputName" type="text" placeholder="Name"/>
-					</div>
-					<div class="row">
-						<input id="inputDirection" type="text" placeholder="Stage Directions"/>
-					</div>
+					<textarea id="inputName" type="text" placeholder="Name"></textarea>
+					<textarea id="inputDirection" type="text" placeholder="Stage Directions"></textarea>
 				</div>
-				<div class="col-mid-8">
-					<div class="row">
-						<input id="inputText" type="text" placeholder="Line"/>
-					</div>
+				<div class="col-md-8">
+					<textarea id="inputText" type="text" placeholder="Line"></textarea>
 				</div>
 				<div class="col-md-1">
-					<div class="row">
-						<input class="submit" type="submit"/>
-					</div>
+					<input type="submit" id="submitLine"/>
 				</div>
-			</div>
-		</form>
+			</form>
+		</div>
+		
 	</body>
 </html>

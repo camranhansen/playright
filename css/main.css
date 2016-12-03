@@ -1,16 +1,55 @@
 body, html {
-	height: 100%;
+  height: 100%;
 	margin: 0 50px;
+}
+textarea {
+  vertical-align: top
 }
 .main_div{
 }
 #script {
-	height: 70%;
+	height: 68vh;
 	background-color: green;
+  overflow: scroll;
 }
-#input {
-	height: 30%;
-	background-color: red;
+#enterLine {
+  height: 27vh;
+  background-color: red;
+}
+#inputName {
+  height: 7vh;
+  margin: 1vh;
+  width: 100%;
+}
+#inputDirection {
+  height: 16vh;
+  margin: 1vh;
+  width: 100%;
+}
+#inputText {
+  height: 25vh;
+  margin: 1vh;
+  width: 100%;
+}
+#submitLine {
+  width: 100%;
+  height: 25vh;
+  margin: 1vh;
+}
+#addSection {
+  height: 5vh;
+}
+#addAct {
+  text-align: center;
+}
+#addScene {
+  text-align: center;
+}
+#actbtn, #scenebtn {
+  height: 4vh;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+  width: 20vw;
 }
 .maintextbox{
 	padding-left: 4%;

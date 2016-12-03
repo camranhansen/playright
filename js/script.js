@@ -1,6 +1,10 @@
 var act = 0; //init act number
 var scene = 0; //init scene number
 var line = 0; //init line number
+function scroll() {
+	var objDiv = document.getElementById("script");
+	objDiv.scrollTop = objDiv.scrollHeight;
+}
 function submit() {
 	$('#enterLine').submit(function(event) {
 		var $inputName = $(event.target).find('#inputName'); //get the name element from the input box
@@ -27,26 +31,29 @@ function submit() {
 		if (name != "") {
 			$("#script").append('<div class="line" id="'+id+'"></div>'); //add line div
 			if (direction != "") {
-				$("#"+id).append('<div class="nameHolder"><span class="name">'+name+'</span> <span class="direction>'+direction+'</span></div>');
+				$("#"+id).append('<div class="nameHolder"><span class="name">'+name+'</span> <span class="direction"> ('+direction+')</span></div>');
 			} else {
 				$("#"+id).append('<div class="nameHolder"><span class="name"'+name+'</span></div>');
 			}
 			$("#"+id).append('<div class="text">'+text+'</div>');
 		}
+		scroll();
 		return false;
 	});
-	$('#enterTitle').submit(function(event) {
+	$('#addAct').submit(function(event) {
 		act += 1;
 		scene = 0;
 		line = 0;
 		$("#script").append("<h1>Act "+act.toString()+"</h1>");
 		return false;
+		scroll();
 	});
-	$('#enterScene').submit(function(event) {
+	$('#addScene').submit(function(event) {
 		scene += 1;
 		line = 0;
 		$("#script").append("<h2>Scene "+scene.toString()+"</h2>");
 		return false;
+		scroll();
 	});
 }
 function main() {
