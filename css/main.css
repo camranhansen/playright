@@ -88,3 +88,9 @@ textarea {
   font-family: courier, monospace;
   font-size: 2.2rem;
 }
+.stageDirection {
+  font-family: courier, monospace;
+  font-size: 1.6rem;
+  font-style: italic;
+  text-align: center;
+}

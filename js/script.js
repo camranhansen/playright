@@ -1,6 +1,10 @@
 var act = 0; //init act number
 var scene = 0; //init scene number
 var line = 0; //init line number
+var play = [];
+function load() {
+
+}
 function update() {
 	var objDiv = document.getElementById("script");
 	objDiv.scrollTop = objDiv.scrollHeight;
@@ -39,6 +43,8 @@ function submit() {
 				$("#"+id).append('<div class="nameHolder"><span class="name"'+name+'</span></div>');
 			}
 			$("#"+id).append('<div class="text">'+text+'</div>');
+		} else {
+			$("#script").append('<div class="stageDirection" id="'+id+'">'+text+'</div>');
 		}
 		update();
 		return false;
