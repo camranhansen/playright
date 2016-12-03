@@ -1,13 +1,13 @@
 body, html {
   height: 100vh;
-	margin: 0 25px;
+  margin: 0 25px;
 }
 textarea {
   vertical-align: top
 }
 #script {
-	height: 68vh;
-	background-color: green;
+  height: 68vh;
+  background-color: green;
   overflow: scroll;
   padding: 20px;
 }
