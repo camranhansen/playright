@@ -1,7 +1,57 @@
 var act = 0; //init act number
 var scene = 0; //init scene number
-function submitLine() {
-	$('#submitLine').submit(function(event) {
-		var $name = $(event.target).find
-	})
+var line = 0; //init line number
+function submit() {
+	$('#enterLine').submit(function(event) {
+		var $inputName = $(event.target).find('#inputName'); //get the name element from the input box
+		var name = $inputName.val(); //get the text from the name element
+		var $inputDirection = $(event.target).find('#inputDirection'); //get the direction element from the input box
+		var direction = $inputDirection.val(); //get the text from the direction element
+		var $inputText = $(event.target).find('#inputText'); //get the direction element from the input box
+		var text = $inputText.val(); //get the text from the direction element
+		line += 1; //increment line number
+		var id = 'a'+act.toString()+'s'+scene.toString()+'l'+line.toString(); //id name
+		var directions = 0;
+		for (var i = 0, len = text.length; i < len; i++) {
+			if (text[i] == "#") {
+				directions += 1
+				if (directions % 2 == 1) {
+					text = [text.slice(0, i), "<i>(", text.slice(i+1)].join('');
+					len += 3;
+				} else {
+					text = [text.slice(0, i), ")</i>", text.slice(i+1)].join('');
+					len += 4;
+				}
+			}
+		}
+		if (name != "") {
+			$("#script").append('<div class="line" id="'+id+'"></div>'); //add line div
+			if (direction != "") {
+				$("#"+id).append('<div class="nameHolder"><span class="name">'+name+'</span> <span class="direction>'+direction+'</span></div>');
+			} else {
+				$("#"+id).append('<div class="nameHolder"><span class="name"'+name+'</span></div>');
+			}
+			$("#"+id).append('<div class="text">'+text+'</div>');
+		}
+		return false;
+	});
+	$('#enterTitle').submit(function(event) {
+		act += 1;
+		scene = 0;
+		line = 0;
+		$("#script").append("<h1>Act "+act.toString()+"</h1>");
+		return false;
+	});
+	$('#enterScene').submit(function(event) {
+		scene += 1;
+		line = 0;
+		$("#script").append("<h2>Scene "+scene.toString()+"</h2>");
+		return false;
+	});
 }
+function main() {
+    submit();
+}
+$(document).ready(main);
+
+
