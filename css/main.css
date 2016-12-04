@@ -9,6 +9,7 @@ textarea {
   height: 68vh;
   overflow: scroll;
   padding: 20px;
+  border: 1px solid #aaa;
 }
 #enterLine {
   height: 27vh;
