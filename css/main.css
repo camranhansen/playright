@@ -12,6 +12,7 @@ textarea {
 }
 #enterLine {
   height: 27vh;
+  font-family: courier, monospace;
 }
 #inputName {
   height: 7vh;
@@ -35,6 +36,7 @@ textarea {
 }
 #addSection {
   height: 5vh;
+  font-family: courier, monospace;
 }
 #addAct {
   text-align: center;
@@ -71,14 +73,19 @@ textarea {
 .heading:hover, .subheading:hover {
   text-decoration: underline;
 }
+.line {
+  width: 100%;
+}
 .nameHolder {
   font-family: courier, monospace;
   font-weight: bold;
   font-size: 1.6rem;
+  width: 20%;
 }
 .text {
   font-family: courier, monospace;
   font-size: 1.6rem;
+  width: 80%;
 }
 .act {
   font-family: courier, monospace;
