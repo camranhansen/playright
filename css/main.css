@@ -103,5 +103,17 @@ textarea {
   text-align: center;
 }
 .title {
-  
+  text-align: center;
+  font-size: 3rem;
+  font-family: courier, monospace;
+}
+.synopsis {
+  font-family: courier, monospace;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.character {
+  text-align: left;
+  font-size: 1.6rem;
+  font-family: courier, monospace;
 }
