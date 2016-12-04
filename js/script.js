@@ -22,10 +22,14 @@ function retrieve() {
 }
 
 function load() {
-	$("#script").append("<h1 class='title'>"+play_title+"</h1>");
-	$("#script").append("<p class='synopsis'>"+play_synopsis+"</p>");
 	for(i=0;i<play.length;i++) {
-		$("#script").append("<p class=''")
+		if (i==0) {
+			$("#script").append("<h1 class='title'>"+meta[i]+"</h1>");
+		} else if {
+			$("#script").append("<p class='synopsis'>"+meta[i]+"</p>");
+		} else {
+			$("#script").append("<ul><li class='character'>"+meta[i][0]+"</li></ul>");
+		}
 	}
 	for(i=0; i<play.length; i++) {
 		if (play[i] == "!act!") {
