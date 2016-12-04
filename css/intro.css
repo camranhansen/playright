@@ -1,0 +1,61 @@
+body, html {
+	margin: 0 50px;
+	height: 100%;
+}
+
+#title {
+	text-align: center;
+	font-family: courier, monospace;
+}
+#inputTitle{
+	font-family: courier, monospace;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 10vh;
+	width: 100%;
+}
+#inputSynopsis{
+	font-family: courier, monospace;
+	width:100%;
+	margin-bottom: 20px;
+	height: 30vh;
+}
+
+#inputCharName{
+	font-family: courier, monospace;
+	width:100%;
+}
+
+#inputCharDescription{
+	font-family: courier, monospace;
+	width: 100%;
+}
+
+#char{
+	font-family: courier, monospace;
+	margin:30px;
+}
+
+#submit{
+	font-family: courier, monospace;
+	width: 100%;
+	position: fixed;
+	bottom:0;
+	margin:auto;
+	left: 0;
+	border-left:50px solid #fff;
+	border-right:50px solid #fff;
+	border-bottom: none;
+}
+
+#charSubmit{
+	font-family: courier, monospace;
+}
+
+#submit:active {
+	border-bottom: none;
+	border-top: none;
+}
+.main_div{
+
+}
