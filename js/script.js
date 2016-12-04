@@ -42,7 +42,7 @@ function addLine(name, direction, text) {
 		if (direction != "") {
 			$("#"+id).append('<td class="nameHolder"><span class="name">'+name+'</span> <span class="direction"> ('+direction+')</span></td>');
 		} else {
-			$("#"+id).append('<td class="nameHolder"><span class="name"'+name+'</span></td>');
+			$("#"+id).append('<td class="nameHolder"><span class="name">'+name+'</span></td>');
 		}
 		$("#"+id).append('<td class="text">'+text+'</td>');
 	} else {
@@ -90,13 +90,13 @@ function submit() {
 			}
 		}
 		if (name != "") {
-			$("#script").append('<div class="line" id="'+id+'"></div>'); //add line div
+			$("#script").append('<table class="line" id="'+id+'"><tr></tr></table>'); //add line div
 			if (direction != "") {
-				$("#"+id).append('<div class="nameHolder"><span class="name">'+name+'</span> <span class="direction"> ('+direction+')</span></div>');
+				$("#"+id).append('<td class="nameHolder"><span class="name">'+name+'</span> <span class="direction"> ('+direction+')</span></td>');
 			} else {
-				$("#"+id).append('<div class="nameHolder"><span class="name"'+name+'</span></div>');
+				$("#"+id).append('<td class="nameHolder"><span class="name">'+name+'</span></td>');
 			}
-			$("#"+id).append('<div class="text">'+text+'</div>');
+			$("#"+id).append('<td class="text">'+text+'</td>');
 		} else {
 			$("#script").append('<div class="stageDirection" id="'+id+'">'+text+'</div>');
 		}
