@@ -2,12 +2,18 @@ var act = 0; //init act number
 var scene = 0; //init scene number
 var line = 0; //init line number
 var play;
-var obscure = ["!act!", "!scene!", ["Bob", "whisper", "It's alive!!!"]];
-
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+// var obscure = ["!act!", "!scene!", ["Bob", "whisper", "It's alive!!!"]];
+// store(obscure);
 function store(thing) {
     var jsoncookie = JSON.stringify(thing);
     document.cookie = "thewholeplay=" + jsoncookie +"; expires=Thu, 18 Dec 2016 12:00:00 UTC";
-    console.log("FUCK" + jsoncookie);
+    // console.log("FUCK" + jsoncookie);
 }
 function retrieve() {
     var value = "; " + document.cookie;
@@ -142,6 +148,16 @@ function submit() {
 		return false;
 	});
 }
+function dl_thing() {
+	console.log("here");
+    doc.fromHTML($('#script').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('sample-file.pdf');
+}
+	
+
 function main() {
 	play=JSON.parse(retrieve());
 	load();
