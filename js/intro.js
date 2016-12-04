@@ -1,5 +1,7 @@
 var charNum = 0;
-var charList = [];
+var play_title = "";
+var play_synopsis = "";
+var characters = [];
 
 function submit() {
 	$('#enterInfo').submit(function(event) {
@@ -9,6 +11,8 @@ function submit() {
 		var synopsis = $inputSynopsis.val(); //get the text from the direction element
 		$("#char").append("<h1>"+title+"</h1>");
 		$("#char").append("<p>"+synopsis+"</p>");
+		play_title = title;
+		play_synopsis = synopsis;
 		return false;
 	});
 
@@ -19,7 +23,9 @@ function submit() {
 		var charDescription = $inputCharDescription.val();
 		$("#char").append("<p><b>"+charName+":</b> "+charDescription+"</p>");
 		charNum += 1;
+		characters.push([charName, charDescription]);
 		return false;
+		window.location.href = "index.html";
 	});
 }
 
