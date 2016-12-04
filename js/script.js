@@ -22,6 +22,11 @@ function retrieve() {
 }
 
 function load() {
+	$("#script").append("<h1 class='title'>"+play_title+"</h1>");
+	$("#script").append("<p class='synopsis'>"+play_synopsis+"</p>");
+	for(i=0;i<play.length;i++) {
+		$("#script").append("<p class=''")
+	}
 	for(i=0; i<play.length; i++) {
 		if (play[i] == "!act!") {
 			addAct();
