@@ -1,4 +1,5 @@
 var charNum = 0;
+var bigarray = [play_title, play_synopsis, characters];
 var play_title = "";
 var play_synopsis = "";
 var characters = [];
@@ -11,6 +12,7 @@ function submit() {
 		play_title = title;
 		play_synopsis = synopsis;
 		window.location.href = "index.html";
+		thingsstore()
 		return false;
 	});
 
@@ -22,10 +24,17 @@ function submit() {
 		$("#char").append("<p><b>"+charName+":</b> "+charDescription+"</p>");
 		charNum += 1;
 		characters.push([charName, charDescription]);
+		thingsstore()
 		return false;
+
 	});
 }
 
+function thingsstore() {
+    var jsoncookie = JSON.stringify(bigarray);
+    document.cookie = "bigarray=" + jsoncookie +"; expires=Thu, 18 Dec 2016 12:00:00 UTC";
+    console.log("here")
+}
 function tpage() {
     submit();
 }
