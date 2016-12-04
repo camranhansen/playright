@@ -5,15 +5,13 @@ function alertCookie() {
     y = JSON.parse(x);
     console.log(y.name);
     getCookie("thewholeplay")
+
 }
 
-function dothings() {
-    play["1"].
-    var jsoncookie = JSON.stringify(play);
-    alert(jsoncookie);
 
+function store(thing) {
+    var jsoncookie = JSON.stringify(thing);
     document.cookie = "thewholeplay=" + jsoncookie;
-    alert(play.name);
 }
 
 function getCookie(name) {
