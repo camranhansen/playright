@@ -7,6 +7,7 @@ function submit() {
 		var title = $inputTitle.val(); //get the text from the name element
 		var $inputSynopsis = $(event.target).find('#inputSynopsis'); //get the direction element from the input box
 		var synopsis = $inputSynopsis.val(); //get the text from the direction element
+		
 		$("#char").append("<h1>"+title+"</h1>");
 		$("#char").append("<p>"+synopsis+"</p>");
 		return false;
@@ -15,7 +16,7 @@ function submit() {
 	$('#enterChar').submit(function(event) {
 		var $inputCharName = $(event.target).find('#inputCharName'); //get the direction element from the input box
 		var charName = $inputCharName.val(); //get the text from the direction element
-		var $inputCharName = $(event.target).find('#inputCharDescription');
+		var $inputCharDescription = $(event.target).find('#inputCharDescription');
 		var charDescription = $inputCharDescription.val();
 		$("#char").append("<h1>"+charName+"</h1>");
 		$("#char").append("<p>"+charDescription+"</p>");
@@ -23,9 +24,10 @@ function submit() {
 		
 		return false;
 	});
+		return false;
+	});
 }
 
-//tpage - new file
 function tpage() {
     submit();
 }

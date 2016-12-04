@@ -1,7 +1,20 @@
 var act = 0; //init act number
 var scene = 0; //init scene number
 var line = 0; //init line number
-var play = ["!act!", "!scene!", ["Bob", "whisper", "It's alive!!!"]];
+var play;
+var obscure = ["!act!", "!scene!", ["Bob", "whisper", "It's alive!!!"]];
+
+function store(thing) {
+    var jsoncookie = JSON.stringify(thing);
+    document.cookie = "thewholeplay=" + jsoncookie +"; expires=Thu, 18 Dec 2016 12:00:00 UTC";
+    console.log("FUCK" + jsoncookie);
+}
+function retrieve() {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + "thewholeplay" + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
+}
+
 function load() {
 	for(i=0; i<play.length; i++) {
 		if (play[i] == "!act!") {
@@ -101,6 +114,7 @@ function submit() {
 			$("#script").append('<div class="stageDirection" id="'+id+'">'+text+'</div>');
 		}
 		play.push([name, direction, text]);
+		store(play);
 		update();
 		return false;
 	});
@@ -129,6 +143,7 @@ function submit() {
 	});
 }
 function main() {
+	play=JSON.parse(retrieve());
 	load();
     submit();
     update();
